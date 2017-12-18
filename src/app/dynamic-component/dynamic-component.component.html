@@ -1,0 +1,9 @@
+
+<div >
+	<form>
+		<input type="text" [(ngModel)]="compName" name="comp" placeholder= "Enter the name of component to switch...." value="" class="input-sm col-xs-4">
+		<input type="submit" class="input-sm btn btn-success" (click)="changeComp()" [value]="btnText">
+	</form>
+</div>
+
+<ng-container *ngComponentOutlet = "Component"></ng-container>

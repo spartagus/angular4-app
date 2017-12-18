@@ -1,0 +1,44 @@
+<div>
+	<div>
+		<label>checker</label>
+		<input type="checkbox" name="checker" [(ngModel)]="checker" value="checker">
+	</div>
+
+	<div *ngIf="checker == null; then thenTemplateNull; else elseTemplateNull"></div>
+	
+	<ng-template #elseTemplateNull>
+		<div *ngIf="checker; then thenTemplate; else elseTemplate"></div>
+	</ng-template>
+
+	<ng-template #thenTemplateNull>
+		<div class="row">
+			<div class="col-lg-7">
+			    <h4>Checkbox value is <span style="background-color:black"> Null </span></h4>
+			    <h4>Angular v2</h4>
+			    <img src="assets/images/nullAng2.JPG" height="auto" width="100%">
+			    <h4>Angular v4 - TypeScript allows us to declare variables as ‘null’ or ‘undefined’. </h4>
+			</div>
+		</div>
+	</ng-template>
+
+	<ng-template #thenTemplate>
+		<div class="row">
+			<div class="col-lg-7">
+			    <h4>Checkbox value is <span style="background-color:black">True</span></h4>
+			    <h4>Angular v4</h4>
+			    <img src="assets/images/ang4then.JPG" height="auto" width="100%">
+			</div>
+		</div>
+	</ng-template>
+
+	<ng-template #elseTemplate>
+		<div class="row">
+			<div class="col-lg-7">
+			    <h4>Checkbox value is <span style="background-color:black">False</span></h4>
+			    <h4>Angular v2 vs v4</h4>
+			    <img src="assets/images/ang2else.JPG" height="auto" width="100%">
+			</div>
+		</div>
+	</ng-template>
+</div>
+

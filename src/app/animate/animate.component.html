@@ -1,0 +1,21 @@
+<div >
+	<div>
+	  <p> Goal count {{itemCount}}</p>
+	</div>
+
+
+	<div class="container">
+		<form>
+			<div class="row">
+				<input type="text" [(ngModel)]="goalText" name="item" class="input-sm col-lg-5 col-sm-8" placeholder= "Enter your goal ....." value="">
+				<input type="submit" class="input-sm btn btn-success col-lg-1 col-sm-1" (click)="addGoal()" [value]="btnText">
+			</div>
+		</form>
+	</div>
+
+	<div [@goals]="goals.length" id="goal-list">
+		<ul>
+			<li *ngFor= "let goal of goals"> {{goal}}</li>
+		</ul>
+	</div>
+</div>

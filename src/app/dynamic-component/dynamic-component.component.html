@@ -6,4 +6,21 @@
 	</form>
 </div>
 
-<ng-container *ngComponentOutlet = "Component"></ng-container>
+<div class="row" style="margin-top: 10px">
+	<div  class="col-lg-6" style="background-image: url('assets/images/dynamic/bck.JPG'); border-radius: 5px ; padding:10px">
+		<p> HTML snippet: </p>
+		<img src="assets/images/dynamic/dchtml.JPG" class="img-responsive" alt="Dynamic html code"> <hr>
+		<p> TS imports snippet: </p>
+		<img src="assets/images/dynamic/ngco.JPG" class="img-responsive" alt="Dynamic component import code">
+		<img src="{{dcimg}}" class="img-responsive" alt="Dynamic component import code"><hr>
+		<p> TS input condition check snippet: </p>
+		<img src="{{dcimgif}}" class="img-responsive" alt="Dynamic component if code">
+	</div>
+	<div class="col-lg-6" style="background-image: url('assets/images/dynamic/bck.JPG'); border-radius: 5px ; padding:10px">
+		<h4>input: {{compName}} </h4>
+		<h4>Output:</h4>
+		<ng-container *ngComponentOutlet = "Component"></ng-container>
+	</div>
+</div>
+
+

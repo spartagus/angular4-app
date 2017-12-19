@@ -12,40 +12,48 @@ import { ErrorPageComponent } from '../error-page/error-page.component';
   styleUrls: ['./dynamic-component.component.css']
 })
 export class DynamicComponentComponent implements OnInit {
-
-	//AotComponent = AotComponent;
 	compName: string;
-	btnText: string = "Change component";
-	
-	//Component = .2 > 0.5 ? AotComponent : HomeComponent ;
-	Component;
+	btnText: string = "Change component";	
+  dcimg: string;
+  dcimgif: string;
+  Component;
+	//Component = .2 > 0.5 ? AotComponent : HomeComponent ;	
 	
   constructor() { }
 
   ngOnInit() {
   	this.compName = "";
+    //this.dcimg = "assets/images/dynamic/error.JPG" ;
+    //this.dcimgif = "assets/images/dynamic/errorif.JPG" ;
   }
 
   changeComp(){
 
   	if(this.compName == "home"){
   		this.Component = HomeComponent ;
+      this.dcimg = "assets/images/dynamic/home.JPG" ;
+      this.dcimgif = "assets/images/dynamic/homeif.JPG" ;
   	}
   	else if(this.compName == "ifelse"){
   		this.Component = IfElseThenComponent ;
+      this.dcimg = "assets/images/dynamic/ifelse.JPG" ;
+      this.dcimgif = "assets/images/dynamic/ifelseif.JPG" ;
   	}
   	else if(this.compName == "aot"){
   		this.Component = AotComponent ;
+      this.dcimg = "assets/images/dynamic/aot.JPG" ;
+      this.dcimgif = "assets/images/dynamic/aotif.JPG" ;
   	}
   	else if(this.compName == "animation"){
   		this.Component = AnimateComponent ;
+      this.dcimg = "assets/images/dynamic/animate.JPG" ;
+      this.dcimgif = "assets/images/dynamic/animateif.JPG" ;
   	}
   	else{
   		this.Component = ErrorPageComponent ;
+      this.dcimg = "assets/images/dynamic/error.JPG" ;
+      this.dcimgif = "assets/images/dynamic/errorif.JPG" ;
   	}
-
-
-
   }
 }
 

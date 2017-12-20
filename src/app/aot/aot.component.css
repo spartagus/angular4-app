@@ -3,3 +3,7 @@ h4,p{
 	color: white;
 	border-radius: 5px;
 }
+
+tr:hover {
+	background-color: black;
+}

@@ -1,0 +1,21 @@
+<div class="row">
+	<form>
+		<input type="text" (keyup)="onNameKeyUp($event)" placeholder= "Enter the name....">
+		<button (click)="getProfile()" class="btn-success">Get Profile</button>
+	</form>
+	<br>
+	<div *ngIf="found; then success else failure"></div>
+	<ng-template #success>
+		<span>{{name}}'s age is {{age}}</span>
+	</ng-template>
+		<ng-template #failure>
+		<span>Entered profile not present in data base</span>
+	</ng-template>
+</div><hr>
+<div class="row">
+	<form>
+		<input type="text" [(ngModel)]="addName" name="addName" placeholder= "Enter the name....">
+		<input type="number" [(ngModel)]="addAge" name="addAge" placeholder= "Enter the age....">	
+		<button (click)="postProfile()" class="btn-info">Post Profile</button>
+	</form>
+</div>

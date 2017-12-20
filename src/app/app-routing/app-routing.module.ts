@@ -7,6 +7,8 @@ import { HomeComponent } from '../home/home.component';
 import { AotComponent } from '../aot/aot.component';
 import { DynamicComponentComponent } from '../dynamic-component/dynamic-component.component';
 import { ErrorPageComponent } from '../error-page/error-page.component';
+import { HttpApiComponent } from '../http-api/http-api.component';
+import { CsvDynamicTableComponent } from '../csv-dynamic-table/csv-dynamic-table.component';
 
 const routes: Routes = [
     {
@@ -36,6 +38,14 @@ const routes: Routes = [
     {
         path: 'error',
         component: ErrorPageComponent,
+    },
+    {
+        path: 'api',
+        component: HttpApiComponent,
+    },
+    {
+        path: 'csv',
+        component: CsvDynamicTableComponent,
     }
 ];
 

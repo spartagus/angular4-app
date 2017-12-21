@@ -1,5 +1,23 @@
-<p>
-  csv-dynamic-table works!
-</p>
 
+<div class="container">
+  <div class="form-group row">
+	<input type="file" (change)="onFileSelect($event.target)" name="myfile">
+  </div>
+
+  <div class="row">
+   <div class="table-responsive col-lg-7">          
+    <table class="table text-center table-condensed table-bordered">
+      <thead>
+        <tr>
+          <th *ngFor="let head of header">{{head}}</th>                          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of jsonData">
+          <td *ngFor="let head of header">{{data.type}}.{{head}}</td>               
+        </tr>        
+      </tbody>
+    </table>
+   </div>
+  </div>
 

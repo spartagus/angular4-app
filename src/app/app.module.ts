@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
+import { InterceptorModule } from './interceptor/interceptor.module';
 
 import { AppComponent } from './app.component';
 import { IfElseThenComponent } from './if-else-then/if-else-then.component';
@@ -36,7 +37,8 @@ import { CsvDynamicTableComponent } from './csv-dynamic-table/csv-dynamic-table.
     FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    InterceptorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
